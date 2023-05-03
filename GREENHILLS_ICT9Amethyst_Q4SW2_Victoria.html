@@ -1,0 +1,27 @@
+<html>
+<head>
+  <style>
+  body {
+  background-image: url("https://img.freepik.com/free-vector/watercolor-paper-with-floral-design_53876-97360.jpg?w=2000");
+}
+div.a {
+  text-align: center;
+}
+</style>
+<title>Time Converter</title>
+<body>
+<center><h2>Time Converter</h2></center>
+<center><label>Minutes</label>
+  <input id="inputMinutes" type="number" placeholder="Number" oninput="TimeConverter(this.value)" onchange="TimeConverter(this.value)"></center>
+<center><p>Seconds: <span id="outputSeconds"></span></p></center>
+<center><p>Hours: <span id="outputHours"></span></p></center>
+<center><p>Days: <span id="outputDays"></span></p></center>
+<script>
+function TimeConverter(valNum) {
+  document.getElementById("outputSeconds").innerHTML=valNum*60;
+  document.getElementById("outputHours").innerHTML=valNum/60;
+  document.getElementById("outputDays").innerHTML=valNum/1440;
+}
+</script>
+</body>
+</html>
